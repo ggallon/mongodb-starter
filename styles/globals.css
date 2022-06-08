@@ -1,4 +1,9 @@
 @tailwind base;
+
+html {
+  -webkit-overflow-scrolling: touch;
+}
+
 @tailwind components;
 @tailwind utilities;
 

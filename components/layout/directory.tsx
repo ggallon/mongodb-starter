@@ -27,8 +27,8 @@ export default function Directory({
   );
 
   return (
-    <aside className="flex-shrink-0 w-full bg-black sm:w-96 h-full overflow-scroll border-r border-gray-800">
-      <div className="px-6 pt-6 pb-0 sticky top-0 bg-black z-20">
+    <aside className="flex-shrink-0 w-full bg-black sm:w-96 h-full overflow-hidden border-r border-gray-800">
+      <div className="px-6 pt-6 pb-0 bg-black">
         <Link href="/">
           <a>
             <div className="bg-dark-accent-1 hover:bg-dark-accent-2 transition-all rounded-2xl h-12 w-12 flex justify-center items-center">
@@ -65,13 +65,13 @@ export default function Directory({
       </div>
       {/* Directory list */}
       <nav
-        className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden"
+        className="flex-1 h-[calc(100%_-_245px)] min-h-0 overflow-y-auto overflow-x-hidden"
         aria-label="Directory"
       >
         {data && data.length > 0 ? (
           data.map(({ _id: letter, users }) => (
-            <div key={letter} className="relative">
-              <div className="bg-dark-accent-1 px-6 py-1 text-sm font-bold text-white uppercase">
+            <div key={letter} className="relative pb-4">
+              <div className="z-10 sticky top-0 bg-dark-accent-1 px-6 py-1 text-sm font-bold text-white uppercase">
                 <h3>{letter}</h3>
               </div>
               <ul role="list" className="relative z-0">
